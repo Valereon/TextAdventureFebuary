@@ -1,4 +1,4 @@
-from Classes.EntityClass import Entity
+from Classes.Entity import Entity
 
 class Human(Entity):
     def __init__(self, name, description, inventory, ai, health, currentWeapon, armor, x, y):

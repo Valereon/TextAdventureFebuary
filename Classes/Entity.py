@@ -1,5 +1,5 @@
-from Classes.InventoryClass import Inventory
-from Classes.AIClass import AI
+from Classes.Inventory import Inventory
+from Classes.AI import AI
 class Entity:
     
     """The Entity class is the base class for all entities in the game."""

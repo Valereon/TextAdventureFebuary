@@ -1,11 +1,11 @@
-from Classes.ItemClass import Item
+from Classes.Item import Item
 class Weapon(Item):
     """A subclass of Item that represents a weapon.
 
     Args:
         Item (Class): Initailizes The Weapon With Attributes From Item.
     """  
-    def __init__(self, name : str, description : str, worth : int, damage : int, rarity : int, stars : int, level : int, xp : float | 0, xpForNextLevel : float | 100, durability : int | 10, repairItems : list):
+    def __init__(self, name: str, description: str, worth: int, damage: int, rarity: int, stars: int, level: int, xp: float, xpForNextLevel: float, durability: int, repairItems: list[Item]):
         """Initializes a Weapon object.
 
         Args:
@@ -52,6 +52,25 @@ class Weapon(Item):
             self.damage *= 1.15
             self.durability *= 1.25
             self.level = 0
-            self.xpForNextLevel =
+            self.xpForNextLevel *= 1.2
     
-        
+    def randomizeRepairItems(self):
+        pass
+    
+
+    def repair(self, item):
+        if item in self.repairItems:
+            self.durability += 1
+            self.repairItems.remove(item)
+            print(f"Repaired {self.name} with {item.name}")
+        else:
+            print(f"{item.name} is not a repair item for {self.name}")
+    
+    def reduceDurability(self, amount):
+        self.durability -= amount
+        if self.durability <= 0:
+            self.durability = 0
+            print(f"{self.name} has broken!")
+    
+    def inspect(self):
+        print(f"{self.name}: {self.description} \nDamage: {self.damage} \nRarity: {self.rarity} \nStars: {self.stars} \nLevel: {self.level} \nDurability: {self.durability} \nRepair Items: {self.repairItems}")
