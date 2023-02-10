@@ -1,9 +1,8 @@
 from Classes.Inventory import Inventory
-from Classes.AI import AI
 class Entity:
     
     """The Entity class is the base class for all entities in the game."""
-    def __init__(self, name, description, inventory : Inventory | None, ai : AI | None, x, y):
+    def __init__(self, name, description, inventory : Inventory | None, x, y):
         """Initializes an Entity object.
 
         Args:
@@ -17,7 +16,6 @@ class Entity:
         self.name = name
         self.description = description
         self.inventory = inventory
-        self.ai = ai
         self.x = x
         self.y = y
         
@@ -44,5 +42,7 @@ class Entity:
         self.x = x
         self.y = y
     
+
+            
     
         

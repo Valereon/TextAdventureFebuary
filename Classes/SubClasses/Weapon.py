@@ -1,11 +1,12 @@
 from Classes.Item import Item
-class Weapon(Item):
+from Classes.StarSystem import StarSystem
+class Weapon(Item, StarSystem):
     """A subclass of Item that represents a weapon.
 
     Args:
         Item (Class): Initailizes The Weapon With Attributes From Item.
     """  
-    def __init__(self, name: str, description: str, worth: int, damage: int, rarity: int, stars: int, level: int, xp: float, xpForNextLevel: float, durability: int, repairItems: list[Item]):
+    def __init__(self, name: str, description: str, worth: int, damage: int, durability: int, repairItems: list[Item]):
         """Initializes a Weapon object.
 
         Args:
@@ -21,43 +22,11 @@ class Weapon(Item):
         """
         super().__init__(name, description, worth)
         self.damage = damage
-        self.rarity = rarity
-        self.stars = stars
-        self.level = level
         self.durability = durability
         self.repairItems = repairItems
-        self.xp = xp
-        self.xpForNextLevel = xpForNextLevel
-        self.maxLevelPerStar = 10
         
-    
-    def __str__(self):
-        return f"{self.name}: {self.description}"
-    
-    def xpCheck(self):
-        if self.xp >= self.xpForNextLevel:
-            self.levelUp()
-    
-    def addXP(self, XP):
-        self.xp += XP
-        self.xpCheck()
-    
-    def levelUp(self):
-        self.level += 1
-        self.xpForNextLevel *= 1.5
         
-    def starLevelUp(self):
-        if self.level >= self.maxLevelPerStar:
-            self.stars += 1
-            self.damage *= 1.15
-            self.durability *= 1.25
-            self.level = 0
-            self.xpForNextLevel *= 1.2
-    
-    def randomizeRepairItems(self):
-        pass
-    
-
+        
     def repair(self, item):
         if item in self.repairItems:
             self.durability += 1
@@ -74,3 +43,4 @@ class Weapon(Item):
     
     def inspect(self):
         print(f"{self.name}: {self.description} \nDamage: {self.damage} \nRarity: {self.rarity} \nStars: {self.stars} \nLevel: {self.level} \nDurability: {self.durability} \nRepair Items: {self.repairItems}")
+        
