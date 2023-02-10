@@ -2,7 +2,7 @@ from Classes.Inventory import Inventory
 class Entity:
     
     """The Entity class is the base class for all entities in the game."""
-    def __init__(self, name, description, inventory : Inventory | None, x, y):
+    def __init__(self, name, description, x, y, inventory = None):
         """Initializes an Entity object.
 
         Args:
@@ -18,6 +18,11 @@ class Entity:
         self.inventory = inventory
         self.x = x
         self.y = y
+    
+    
+    def inspect(self):
+        return f"{self.name}: {self.description}"
+        
         
     
     def distanceFromPlayer(self, player):

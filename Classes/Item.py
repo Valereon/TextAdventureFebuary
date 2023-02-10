@@ -11,7 +11,7 @@ class Item:
         self.description = description
         self.worth = worth
 
-    def __str__(self):
+    def inspect(self):
         return f"{self.name}: {self.description}"
 
     def onTake(self):

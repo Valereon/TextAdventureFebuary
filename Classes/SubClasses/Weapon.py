@@ -1,12 +1,12 @@
 from Classes.Item import Item
-from Classes.StarSystem import StarSystem
+from Classes.Systems.StarSystem import StarSystem
 class Weapon(Item, StarSystem):
     """A subclass of Item that represents a weapon.
 
     Args:
         Item (Class): Initailizes The Weapon With Attributes From Item.
     """  
-    def __init__(self, name: str, description: str, worth: int, damage: int, durability: int, repairItems: list[Item]):
+    def __init__(self, name: str, description: str, worth: int, damage: int, durability: int, repairItems: list[Item] = None, rarity: str = "Common", stars: int = 0, xp: int = 0, level: int = 0, xpForNextLevel: int = 100):
         """Initializes a Weapon object.
 
         Args:
@@ -20,10 +20,17 @@ class Weapon(Item, StarSystem):
             durability (Int): The durability of the weapon.
             repairItems (Items[]): The items needed to repair the weapon.
         """
-        super().__init__(name, description, worth)
+        self.rarity = rarity
+        self.stars = stars
+        self.xp = xp
+        self.level = level
+        self.xpForNextLevel = xpForNextLevel         
         self.damage = damage
         self.durability = durability
         self.repairItems = repairItems
+        Item.__init__(name, description, worth)
+        StarSystem.__init__(self, self.rarity, self.stars, self.xp, self.level, self.xpForNextLevel)
+        
         
         
         

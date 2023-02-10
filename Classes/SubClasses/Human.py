@@ -1,7 +1,7 @@
 from Classes.Entity import Entity
 
 class Human(Entity):
-    def __init__(self, name, description, inventory, ai, health, currentWeapon, armor, x, y):
+    def __init__(self, name, description, inventory=None, health=20, currentWeapon=None, armor=None, x=0, y=0):
         """Initializes a Human object From the Entity Class.
 
         Args:
@@ -15,7 +15,7 @@ class Human(Entity):
             x (Super(Int)): xCoordaite of the entity.
             y (Super(Int)): Y coordinate of the entity.
         """
-        super().__init__(name, description, inventory, ai, x, y)
+        super().__init__(name, description, inventory, x, y)
 
         self.health = health
         self.currentWeapon = currentWeapon

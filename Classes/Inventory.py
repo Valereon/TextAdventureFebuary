@@ -4,13 +4,13 @@ from Classes.SubClasses.Armor import Armor
 class Inventory:
     """Makes an inventory object.
     """
-    def __init__(self, capacity : int):
+    def __init__(self, capacity=None):
         """Initializes an Inventory object."""
         self.items = []
         self.Descriptions = []
         self.capacity = capacity
 
-    def initArmorSlots(self, headSlot : Armor, chestSlot : Armor, legsSlot : Armor, feetSlot : Armor, weaponSlot : Item, offHandSlot : Item, ringSlot : Item, necklaceSlot : Item):
+    def initArmorSlots(self, headSlot=None, chestSlot=None, legsSlot=None, feetSlot=None, weaponSlot=None, offHandSlot=None, ringSlot=None, necklaceSlot=None):
         """Init the Armor slots. for the entitity with a inventory. object attached to it."""
         self.headSlot = headSlot
         self.chestSlot = chestSlot
@@ -30,11 +30,11 @@ class Inventory:
             print("\t" + self.items[i].__str__() + " " + "\t" + self.items[i + 1].__str__())
     
     
-    def populateInventory(self, items : list[Item]):
+    def populateInventory(self, items=None[Item]):
         """Populates the inventory with items.
         
         Args:
-            items (Items[]): The items to populate the inventory with.
+            items (Items[]=None items to populate the inventory with.
         """
         if self.checkIfFull():
             print("Inventory is full.")
@@ -47,7 +47,7 @@ class Inventory:
         """Adds an item to the inventory.
         
         Args:
-            item (Item): The item to add to the inventory.
+            item (Item=None item to add to the inventory.
         """
         self.items.append(item)
     
@@ -55,7 +55,7 @@ class Inventory:
         """Removes an item from the inventory.
         
         Args:
-            item (Item): The item to remove from the inventory.
+            item (Item=None item to remove from the inventory.
         """
         self.items.remove(item)
     
@@ -64,7 +64,7 @@ class Inventory:
         """Gets an item from the inventory.
         
         Args:
-            item (Item): The item to get from the inventory.
+            item (Item=None item to get from the inventory.
         """
         return self.items[item]
     
@@ -72,7 +72,7 @@ class Inventory:
         """Checks if the inventory is full.
         
         Returns:
-            bool: True if the inventory is full, False if it is not.
+            boo=None if the inventory is full, False if it is not.
         """
         if len(self.items) >= self.capacity:
             return True

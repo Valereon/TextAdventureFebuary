@@ -1,5 +1,5 @@
 class StarSystem:
-    def __init__(self, rarity, stars, level, durability, repairItems, xp, xpForNextLevel):
+    def __init__(self, rarity = "Common", stars = 0, level = 0, xp = 0, xpForNextLevel = 100):
         self.rarity = rarity
         self.stars = stars
         self.level = level
@@ -26,5 +26,19 @@ class StarSystem:
             self.durability *= 1.25
             self.level = 0
             self.xpForNextLevel *= 1.5
+    def rarityColoring(self):
+        if self.rarity == "Common":
+            return "White"
+        elif self.rarity == "Uncommon":
+            return "Green"
+        elif self.rarity == "Rare":
+            return "Blue"
+        elif self.rarity == "Epic":
+            return "Purple"
+        elif self.rarity == "Legendary":
+            return "Gold"
+        else:
+            return "White"        
+        
 
  

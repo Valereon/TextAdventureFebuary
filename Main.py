@@ -6,6 +6,7 @@ import time
 import rich
 from rich import print as rprint
 from rich.console import *
+from rich import console
 
 def mainMenu():
     rprint("Welcome to the game!")
@@ -26,12 +27,15 @@ def startGame():
     Console().clear()
     name = input("What is your name?: ")
     playerInventory = Inventory(5)
-    player = Human(name, "This is you?", playerInventory, None, 20, None, None, 0, 0)
+    player = Human(name, "Your not [italic] That Attractive[/italic]", playerInventory, 20, None, None, 0, 0)
+    time.sleep(10)
     
     
     
     
-
+def inspectAny(object):
+    return object.inspect()
+    
 
 
 

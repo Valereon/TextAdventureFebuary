@@ -1,8 +1,10 @@
-from Classes.SubClasses.Weapon import Weapon
+from Classes.Item import Item
+from Classes.Systems.StarSystem import StarSystem
 
-class Armor(Weapon):
-    def __init__(self, name: str, description: str, worth: int, damage: int, rarity: int, stars: int, level: int, xp: int, xpForNextLevel: float, durability: int, repairItems: list, overAllDefense : int):
-        super().__init__(name, description, worth, damage, rarity, stars, level, xp, xpForNextLevel, durability, repairItems)
+class Armor(Item, StarSystem):
+    def __init__(self,name,description,worth,overAllDefense,rarity = "Common", stars = 0, xp = 0, level = 0, xpForNextLevel = 100):
+        Item.__init__(self, name, description, worth)
+        StarSystem.__init__(self, "Common", 0, 0, 0, 100)
         self.overAllDefense = overAllDefense
         self.helmet = self.name + " Helmet"
         self.chestplate = self.name + " Chestplate"

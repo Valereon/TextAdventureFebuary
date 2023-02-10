@@ -1,0 +1,175 @@
+{
+	"Stick": {
+		"Wood": 1,
+		"Result": "Stick",
+		"Amount": 2,
+		"Crafting":"Inventory",
+		"Unlocked": true
+	},
+	"Stone": {
+		"Rock": 1,
+		"Result": "Stone",
+		"Amount": 2,
+		"Crafting":"Inventory",
+		"Unlocked": true
+	},
+	"String": {
+		"Silk": 1,
+		"Result": "String",
+		"Amount": 2,
+		"Crafting":"Inventory",
+		"Unlocked": true
+	},
+	"Binding": {
+		"String": 1,
+		"Slime": 1,
+		"Result": "Binding",
+		"Amount": 2,
+		"Crafting":"Inventory",
+		"Unlocked": false
+	},
+	"Iron": {
+		"Iron Ore": 3,
+		"Result": "Iron",
+		"Amount": 2,
+		"Crafting":"Inventory",
+		"Unlocked": false
+	},
+	"Steel": {
+		"Iron Ore": 2,
+		"Coal": 1,
+		"Result": "Steel",
+		"Amount": 1,
+		"Crafting":"Inventory",
+		"Unlocked": false
+	},
+	"Gold": {
+		"Gold Ore": 3,
+		"Result": "Gold",
+		"Amount": 2,
+		"Crafting":"Inventory",
+		"Unlocked": false
+	},
+	"Diamond": {
+		"Diamond Ore": 3,
+		"Result": "Diamond",
+		"Amount": 1,
+		"Crafting":"Inventory",
+		"Unlocked": false
+	},
+	"Emerald": {
+		"Emerald Ore": 3,
+		"Result": "Emerald",
+		"Amount": 1,
+		"Crafting":"Inventory",
+		"Unlocked": false
+	},
+	"Wooden Sword": {
+		"Wood": 3,
+		"Stick": 2,
+		"String": 3,
+		"Result": "Wooden Sword",
+		"Crafting":"Inventory",
+		"Unlocked": true
+	},
+	"Wooden Pickaxe": {
+		"Wood": 3,
+		"Stick": 3,
+		"String": 5,
+		"Result": "Wooden Pickaxe",
+		"Crafting":"Inventory",
+		"Unlocked": true
+	},
+	"Wooden Axe": {
+		"Wood": 2,
+		"Stick": 1,
+		"String": 2,
+		"Result": "Wooden Axe",
+		"Crafting":"Inventory",
+		"Unlocked": true
+	},
+	"Stone Sword": {
+		"Stone": 3,
+		"Stick": 2,
+		"Binding": 1,
+		"Result": "Stone Sword",
+		"Crafting":"Inventory",
+		"Unlocked": false
+	},
+	"Stone Pickaxe": {
+		"Stone": 4,
+		"Stick": 5,
+		"Binding": 2,
+		"Result": "Stone Pickaxe",
+		"Crafting":"Inventory",
+		"Unlocked": false
+	},
+	"Stone Axe": {
+		"Stone": 3,
+		"Stick": 2,
+		"Binding": 1,
+		"Result": "Stone Axe",
+		"Crafting":"Inventory",
+		"Unlocked": false
+	},
+	"Iron Sword": {
+		"Iron": 8,
+		"Result": "Iron Sword",
+		"Crafting":"Inventory",
+		"Unlocked": false
+	},
+	"Iron Pickaxe": {
+		"Iron": 3,
+		"Result": "Iron Pickaxe",
+		"Crafting":"Inventory",
+		"Unlocked": false
+	},
+	"Iron Axe": {
+		"Iron": 3,
+		"Result": "Iron Axe",
+		"Crafting":"Inventory",
+		"Unlocked": false
+	},
+	"Steel Sword": {
+		"Steel": 7,
+		"Result": "Steel Sword",
+		"Crafting":"Inventory",
+		"Unlocked": false
+	},
+	"Steel Pickaxe": {
+		"Steel": 9,
+		"Result": "Steel Pickaxe",
+		"Crafting":"Inventory",
+		"Unlocked": false
+	},
+	"Steel Axe": {
+		"Steel": 6,
+		"Result": "Steel Sword",
+		"Crafting":"Inventory",
+		"Unlocked": false
+	},
+	"Diamond Sword": {
+		"Diamond": 3,
+		"Stick": 2,
+		"Result": "Diamond Sword",
+		"Crafting":"Inventory",
+		"Unlocked": false
+	},
+
+	"Diamond Pickaxe": {
+		"Diamond": 3,
+		"Stick": 2,
+		"Result": "Diamond Pickaxe",
+		"Crafting":"Inventory",
+		"Unlocked": false
+	},
+
+	"Diamond Axe": {
+		"Diamond": 3,
+		"Stick": 2,
+		"Result": "Diamond Axe",
+		"Crafting":"Forge",
+		"Unlocked": false
+	}
+}
+
