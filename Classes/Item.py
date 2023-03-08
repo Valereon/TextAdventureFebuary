@@ -1,3 +1,4 @@
+
 class Item:
     def __init__(self, name, description, worth):
         """Initializes an Item object.

@@ -9,7 +9,6 @@ class Entity:
             name (String): The name of the entity.
             description (String): Description of the entity. to be displayed on inspect.
             inventory (Inventory): The inventory of the entity.
-            ai (Ai/None): The type of ai the entity has.
             x (Int): xCoordaite of the entity.
             y (Int): Y coordinate of the entity.
         """
@@ -46,7 +45,13 @@ class Entity:
         """
         self.x = x
         self.y = y
-    
+    def onCollision(self, entity):
+        """When two entites collide.
+
+        Args:
+            entity (Entity): The Enitiy Base Class
+        """        
+        pass
 
             
     

@@ -1,5 +1,7 @@
 class StarSystem:
-    def __init__(self, rarity = "Common", stars = 0, level = 0, xp = 0, xpForNextLevel = 100):
+    def __init__(self, rarity = "Common", stars = 0,
+                level = 0, xp = 0, xpForNextLevel = 100):
+
         self.rarity = rarity
         self.stars = stars
         self.level = level

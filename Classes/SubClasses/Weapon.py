@@ -6,7 +6,11 @@ class Weapon(Item, StarSystem):
     Args:
         Item (Class): Initailizes The Weapon With Attributes From Item.
     """  
-    def __init__(self, name: str, description: str, worth: int, damage: int, durability: int, repairItems: list[Item] = None, rarity: str = "Common", stars: int = 0, xp: int = 0, level: int = 0, xpForNextLevel: int = 100):
+    def __init__(self, name: str, description: str, worth: int, damage: int,
+                durability: int, repairItems: list[Item] = None,
+                rarity: str = "Common", stars: int = 0, xp: int = 0,
+                level: int = 0, xpForNextLevel: int = 100):
+
         """Initializes a Weapon object.
 
         Args:

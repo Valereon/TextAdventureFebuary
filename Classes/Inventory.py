@@ -10,7 +10,8 @@ class Inventory:
         self.Descriptions = []
         self.capacity = capacity
 
-    def initArmorSlots(self, headSlot=None, chestSlot=None, legsSlot=None, feetSlot=None, weaponSlot=None, offHandSlot=None, ringSlot=None, necklaceSlot=None):
+    def initArmorSlots(self, headSlot=None, chestSlot=None, legsSlot=None, feetSlot=None,
+                    weaponSlot=None, offHandSlot=None, ringSlot=None, necklaceSlot=None):
         """Init the Armor slots. for the entitity with a inventory. object attached to it."""
         self.headSlot = headSlot
         self.chestSlot = chestSlot
@@ -30,7 +31,7 @@ class Inventory:
             print("\t" + self.items[i].__str__() + " " + "\t" + self.items[i + 1].__str__())
     
     
-    def populateInventory(self, items=None[Item]):
+    def populateInventory(self, items=list[Item]):
         """Populates the inventory with items.
         
         Args:
